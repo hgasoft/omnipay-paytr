@@ -29,7 +29,7 @@ class CompletePurchaseResponse extends AbstractResponse
 
 	public function isSuccessful(): bool
 	{
-		return $this->getData()->status === Status::SUCCESS && $this->getData()->hash === $this->getData()->confirmation_hash;
+		return !isset($this->getData()->fail_reason);
 	}
 
 	public function getMessage(): string

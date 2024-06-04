@@ -41,9 +41,10 @@ class CompletePurchaseRequest extends RemoteAbstractRequest
 	 */
 	protected function validateAll(): void
 	{
+
 		$this->validateSettings();
 
-		$this->validate("amount", "transactionId", "status");
+//		$this->validate("amount", "transactionId", "status");
 	}
 
 	/**
