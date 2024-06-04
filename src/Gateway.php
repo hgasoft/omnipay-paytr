@@ -86,4 +86,9 @@ class Gateway extends AbstractGateway
 	{
 		return $this->createRequest(InstallmentRateInquiryRequest::class, $options);
 	}
+
+	public function acceptNotification(array $options = [])
+    	{
+        	return $this->createRequest(CompletePurchaseRequest::class, $options);
+    	}
 }
